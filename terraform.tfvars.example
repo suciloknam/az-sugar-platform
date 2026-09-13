@@ -1,0 +1,8 @@
+project     = "social"
+environment = "prod"
+location    = "centralindia"
+
+# Run: az ad signed-in-user show --query id -o tsv
+entra_admin_object_id = "<your-entra-object-id>"
+entra_admin_login     = "you@yourdomain.com"
+entra_admin_principal_type = "User"
