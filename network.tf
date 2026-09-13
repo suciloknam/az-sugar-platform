@@ -10,11 +10,11 @@ resource "azurerm_virtual_network" "main" {
   resource_group_name = azurerm_resource_group.main.name
 }
 
-resource "azurerm_subnet" "container_apps" {
-  name                 = "snet-containerapps"
+resource "azurerm_subnet" "aks" {
+  name                 = "snet-aks"
   resource_group_name  = azurerm_resource_group.main.name
   virtual_network_name = azurerm_virtual_network.main.name
-  address_prefixes     = [var.container_apps_subnet_prefix]
+  address_prefixes     = ["10.0.3.0/24"]
 }
 
 resource "azurerm_subnet" "postgres" {
